@@ -21,4 +21,3 @@ for i in range(0, len(k)):
         m += ' + '
 m += ' = 0'
 print(m)
-    
