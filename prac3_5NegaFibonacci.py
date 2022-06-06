@@ -29,7 +29,7 @@ def fib(n):
 
 list = []
 
-for item in range(-k, -1):
+for item in range(-k, 0):
     list.append(negafib(item))
 for item in range(0, k+1):
     list.append(fib(item))
