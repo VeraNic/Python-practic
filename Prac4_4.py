@@ -7,10 +7,18 @@
 # при n=2 ==> 27x^2 + 95x + 79 = 0
 
 import random
-import array
-n = random.random(10)
-k.array(n)
-for item in range(n):
-    k(item)= random.random(100)
-    
+k = [random.randint(1, 100) for i in range(random.randint(2, 10))]
+print('Натуральная степень: n =', len(k)-1) 
+
+m = ''
+for i in range(0, len(k)):
+    m = m + str(k[i]) 
+    if i < len(k) - 1:
+        m += 'х'
+    if i < len(k)- 2:
+        m += '^'+ str(len(k) - i - 1)
+    if i < len(k) - 1:
+        m += ' + '
+m += ' = 0'
+print(m)
     
