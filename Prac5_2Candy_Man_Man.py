@@ -77,6 +77,15 @@ def play_game(n, m, players):
         if count == 0:
             first = random.randint(0, 1)
             print(f'\nПервый ход определён жеребьёвкой, начинает {players[first]}. \n{players[first]}: ')
+            if first== 1:
+                move = 20
+            move = (input(f'{players[0]}: '))
+            while move > n or move > m:
+                print(f'Неверный ход, можно взять не более {m}, сейчас осталось {n}')
+                move = int(input(f'Попробуйте ещё раз: '))
+            if first == 0: 
+                move = 20
+            count = 1 
         if count%2 == 0:
             move = int(input(f'{players[count%2]}: '))
             while move > n or move > m:
